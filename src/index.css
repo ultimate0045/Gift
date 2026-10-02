@@ -1,0 +1,443 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .gingham-bg {
+    background-color: #f4f9fe;
+    background-image: 
+      linear-gradient(90deg, rgba(184, 219, 246, 0.42) 50%, transparent 50%),
+      linear-gradient(rgba(184, 219, 246, 0.42) 50%, transparent 50%);
+    background-size: 52px 52px;
+  }
+
+  .kawaii-title {
+    font-family: 'Fredoka', 'Sniglet', 'Nunito', cursive, sans-serif;
+    color: #d81b43;
+    -webkit-text-stroke: 4px #ffffff;
+    paint-order: stroke fill;
+    filter: drop-shadow(0 4px 6px rgba(216, 27, 67, 0.22));
+  }
+
+  .btn-kawaii {
+    font-family: 'Fredoka', 'Nunito', sans-serif;
+    box-shadow: 0 5px 0 #9c102f, 0 8px 16px rgba(216, 27, 67, 0.28);
+    transition: all 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .btn-kawaii:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 7px 0 #9c102f, 0 12px 20px rgba(216, 27, 67, 0.35);
+  }
+
+  .btn-kawaii:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow: 0 2px 0 #9c102f, 0 4px 8px rgba(216, 27, 67, 0.25);
+  }
+
+  @keyframes floatSoft {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-7px) rotate(5deg); }
+  }
+
+  @keyframes driftSlow {
+    0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+    50% { transform: translateY(-12px) rotate(6deg) scale(1.08); }
+  }
+
+  @keyframes driftMed {
+    0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+    50% { transform: translateY(-9px) rotate(-5deg) scale(1.05); }
+  }
+
+  @keyframes driftFast {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(4deg); }
+  }
+
+  @keyframes sparkleGlow {
+    0%, 100% { transform: scale(0.85) rotate(0deg); opacity: 0.65; }
+    50% { transform: scale(1.18) rotate(25deg); opacity: 1; filter: drop-shadow(0 0 6px #fed7e2); }
+  }
+
+  @keyframes unicornFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1.5deg); }
+  }
+
+  @keyframes heartPop {
+    0% { transform: scale(0) translateY(0); opacity: 1; }
+    50% { transform: scale(1.2) translateY(-20px); opacity: 0.9; }
+    100% { transform: scale(0.8) translateY(-40px); opacity: 0; }
+  }
+
+  .floating-star {
+    animation: floatSoft 5s ease-in-out infinite;
+  }
+
+  .anim-drift-slow {
+    animation: driftSlow 4s ease-in-out infinite;
+  }
+
+  .anim-drift-med {
+    animation: driftMed 3.2s ease-in-out infinite;
+  }
+
+  .anim-drift-fast {
+    animation: driftFast 2.4s ease-in-out infinite;
+  }
+
+  .anim-sparkle {
+    animation: sparkleGlow 2.5s ease-in-out infinite;
+  }
+
+  .unicorn-float {
+    animation: unicornFloat 3.8s ease-in-out infinite;
+  }
+
+  /* Why did you click NO! page styles */
+  .bubble-title {
+    color: #be212f;
+    text-shadow:
+      -3px -3px 0 #ffffff,
+       3px -3px 0 #ffffff,
+      -3px  3px 0 #ffffff,
+       3px  3px 0 #ffffff,
+      -4px  0   0 #ffffff,
+       4px  0   0 #ffffff,
+       0   -4px 0 #ffffff,
+       0    4px 0 #ffffff,
+       0 6px 14px rgba(220, 38, 38, 0.2);
+  }
+
+  .star-shape {
+    fill: #fca5c5;
+    filter: drop-shadow(0 2px 5px rgba(244, 114, 182, 0.25));
+  }
+
+  .btn-sorry {
+    background-color: #b8142c;
+    box-shadow: 0 4px 10px rgba(184, 20, 44, 0.35);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .btn-sorry:hover {
+    background-color: #a01025;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(184, 20, 44, 0.45);
+  }
+  .btn-sorry:active {
+    transform: scale(0.96);
+  }
+
+  @keyframes tearFlow {
+    0%, 100% { transform: translateY(0) scaleY(1); opacity: 0.9; }
+    50% { transform: translateY(3px) scaleY(1.05); opacity: 1; }
+  }
+  .anim-tear {
+    animation: tearFlow 1.6s ease-in-out infinite;
+    transform-origin: top center;
+  }
+
+  @keyframes sobShake {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-2px); }
+    75% { transform: translateY(2px); }
+  }
+  .anim-sob {
+    animation: sobShake 1.8s ease-in-out infinite;
+  }
+
+  /* Bouquet Selector page styles */
+  .bubbly-title {
+    font-family: 'Fredoka', cursive, sans-serif;
+    color: #b8233e;
+    text-shadow: 
+      -2.5px -2.5px 0 #ffffff,
+       2.5px -2.5px 0 #ffffff,
+      -2.5px  2.5px 0 #ffffff,
+       2.5px  2.5px 0 #ffffff,
+       0px 3px 0 #ffffff,
+       0px -3px 0 #ffffff,
+       -3px 0px 0 #ffffff,
+       3px 0px 0 #ffffff,
+       0px 4px 10px rgba(184, 35, 62, 0.25);
+    letter-spacing: 0.02em;
+  }
+
+  .transparent-blend {
+    mix-blend-mode: multiply;
+    isolation: auto;
+  }
+
+  .bouquet-card {
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center bottom;
+    will-change: transform;
+  }
+
+  .bouquet-card:hover {
+    transform: translateY(-10px) scale(1.06) rotate(-2deg);
+    filter: drop-shadow(0 14px 20px rgba(184, 35, 62, 0.2));
+  }
+
+  .bouquet-card:nth-child(2):hover {
+    transform: translateY(-10px) scale(1.06) rotate(2deg);
+  }
+
+  .star-delay-1 { animation-delay: 0s; }
+  .star-delay-2 { animation-delay: 1.3s; }
+  .star-delay-3 { animation-delay: 2.1s; }
+  .star-delay-4 { animation-delay: 3s; }
+
+  /* Happy Boyfriend's Day sticker card styles */
+  .sticker-text {
+    font-family: 'Fredoka', 'Nunito', cursive, sans-serif;
+    color: #c91834;
+    text-shadow:
+      -5px -5px 0 #ffffff,
+       0   -5px 0 #ffffff,
+       5px -5px 0 #ffffff,
+       5px  0   0 #ffffff,
+       5px  5px 0 #ffffff,
+       0    5px 0 #ffffff,
+      -5px  5px 0 #ffffff,
+      -5px  0   0 #ffffff,
+      -7px -7px 0 #ffffff,
+       7px -7px 0 #ffffff,
+       7px  7px 0 #ffffff,
+      -7px  7px 0 #ffffff,
+       0 6px 14px rgba(180, 70, 90, 0.18);
+    filter: drop-shadow(0 4px 6px rgba(140, 160, 185, 0.25));
+  }
+  
+  .sticker-pop {
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
+  }
+
+  @keyframes gentlePulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
+    50% { transform: scale(1.08) rotate(4deg); opacity: 1; }
+  }
+  .star-pulse {
+    animation: gentlePulse 4.5s ease-in-out infinite;
+  }
+
+  /* Scrapbook - Dear Love page styles */
+  .scalloped-love-card {
+    background: linear-gradient(145deg, #b91336, #9b0f2e);
+    border-radius: 46px 42px 48px 44px;
+    box-shadow: 0 16px 36px -6px rgba(185, 19, 54, 0.4), 0 8px 16px rgba(0, 0, 0, 0.12);
+    position: relative;
+  }
+
+  .scalloped-love-card::before {
+    content: '';
+    position: absolute;
+    inset: -9px;
+    border-radius: 54px;
+    border: 8px dashed #b91336;
+    filter: blur(1.5px);
+    z-index: -1;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .font-romantic-heading {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-letter-body {
+    font-family: 'Caveat', cursive;
+  }
+
+  .sprocket-hole {
+    width: 5px;
+    height: 7px;
+    background-color: #f7e6eb;
+    border-radius: 1.5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+  }
+  
+  .film-card {
+    box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.35), 0 4px 10px rgba(0,0,0,0.18);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .film-card:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    z-index: 25;
+  }
+
+  /* Keepsake Love You page styles */
+  .bg-gingham-keepsake {
+    background-color: #fce7ef;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        rgba(244, 143, 177, 0.35) 0px,
+        rgba(244, 143, 177, 0.35) 36px,
+        transparent 36px,
+        transparent 72px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(244, 143, 177, 0.35) 0px,
+        rgba(244, 143, 177, 0.35) 36px,
+        transparent 36px,
+        transparent 72px
+      );
+    background-size: 72px 72px;
+  }
+
+  .font-romantic-script {
+    font-family: 'Sacramento', 'League Script', 'Caveat', cursive;
+    letter-spacing: 0.05em;
+  }
+
+  .photo-card {
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+    border: 4.5px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  }
+  .photo-card:hover {
+    transform: scale(1.08) translateY(-4px) !important;
+    box-shadow: 0 14px 26px rgba(185, 28, 28, 0.2);
+    z-index: 40 !important;
+  }
+
+  @keyframes gentleBounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+  }
+  .animate-next-arrow {
+    animation: gentleBounce 1.6s infinite ease-in-out;
+  }
+
+  @keyframes subtleFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-4px) rotate(2deg); }
+  }
+  .animate-float {
+    animation: subtleFloat 4s infinite ease-in-out;
+  }
+
+  /* Staggered entrance sliding animations */
+  @keyframes slideInLeft {
+    0% { transform: translateX(-120px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes slideInRight {
+    0% { transform: translateX(120px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes slideInDown {
+    0% { transform: translateY(-70px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes slideInUp {
+    0% { transform: translateY(70px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  .animate-slide-left {
+    animation: slideInLeft 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+  .animate-slide-right {
+    animation: slideInRight 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+  .animate-slide-down {
+    animation: slideInDown 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+  .animate-slide-up {
+    animation: slideInUp 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  /* Song That Reminds Me of You styles */
+  .gingham-bg-song {
+    background-color: #ffd8df;
+    background-image: 
+      linear-gradient(90deg, rgba(255, 255, 255, 0.45) 50%, transparent 50%),
+      linear-gradient(rgba(255, 255, 255, 0.45) 50%, transparent 50%);
+    background-size: 64px 64px;
+  }
+
+  .cursive-title {
+    font-family: 'Great Vibes', 'Caveat', cursive;
+    text-shadow: 0.5px 0.5px 1px rgba(100, 30, 40, 0.15);
+  }
+  
+  .player-shadow {
+    box-shadow: 0 16px 36px -10px rgba(70, 20, 30, 0.35), 0 0 1px 1px rgba(0,0,0,0.1);
+  }
+
+  .heart-clip {
+    clip-path: path('M 50 15 C 35 -5, 0 5, 0 35 C 0 60, 35 80, 50 95 C 65 80, 100 60, 100 35 C 100 5, 65 -5, 50 15 Z');
+  }
+
+  /* You're My - Romantic Scrapbook Page styles */
+  .bg-gingham-blue {
+    background-color: #f4f9fd;
+    background-image: 
+      linear-gradient(90deg, rgba(162, 206, 237, 0.45) 50%, transparent 50%),
+      linear-gradient(rgba(162, 206, 237, 0.45) 50%, transparent 50%);
+    background-size: 54px 54px;
+  }
+
+  .bg-gingham-pink {
+    background-color: #fff6f8;
+    background-image: 
+      linear-gradient(90deg, rgba(251, 190, 205, 0.5) 50%, transparent 50%),
+      linear-gradient(rgba(251, 190, 205, 0.5) 50%, transparent 50%);
+    background-size: 20px 20px;
+  }
+
+  .torn-photo-border {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.08));
+    clip-path: polygon(
+      0% 2px, 2% 0px, 5% 3px, 9% 1px, 14% 3px, 18% 0px, 23% 2px, 28% 0px, 34% 3px, 39% 1px, 
+      45% 2px, 50% 0px, 56% 3px, 62% 1px, 67% 2px, 73% 0px, 79% 3px, 84% 1px, 90% 2px, 95% 0px, 100% 2px,
+      99% 12%, 100% 22%, 99% 33%, 100% 45%, 98.5% 56%, 100% 67%, 99% 78%, 100% 89%, 98.5% 100%,
+      96% 98%, 91% 100%, 85% 98.5%, 79% 100%, 72% 98%, 66% 100%, 60% 98.5%, 54% 100%, 48% 98%, 
+      41% 100%, 35% 98.5%, 29% 100%, 22% 98%, 16% 100%, 11% 98.5%, 5% 100%, 0% 98%,
+      1.5% 88%, 0% 77%, 1% 65%, 0% 53%, 1.5% 42%, 0% 30%, 1.2% 18%, 0% 8%
+    );
+  }
+
+  .scrapbook-star {
+    fill: #fca5bb;
+    filter: drop-shadow(0 1px 2px rgba(230, 100, 130, 0.2));
+    opacity: 0.92;
+    transition: transform 0.3s ease;
+  }
+  .scrapbook-star:hover {
+    transform: scale(1.15) rotate(8deg);
+  }
+
+  .font-brush {
+    font-family: 'Alex Brush', cursive;
+  }
+  .font-italicSerif {
+    font-family: 'Playfair Display', serif;
+  }
+  .text-scriptNavy {
+    color: #1b324d;
+  }
+
+  /* Romantic Memory Scrapbook - Spiderman & Hello Kitty styles */
+  .font-romantic {
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 0.02em;
+  }
+
+  .star-soft {
+    filter: drop-shadow(0px 2px 4px rgba(255, 182, 193, 0.4));
+    transition: transform 0.3s ease;
+  }
+  .star-soft:hover {
+    transform: scale(1.2) rotate(10deg);
+  }
+
+  .float-slow {
+    animation: gentle-float 4s ease-in-out infinite;
+  }
+}
+
+

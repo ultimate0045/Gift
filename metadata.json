@@ -1,0 +1,6 @@
+{
+  "name": "Boyfriend Day Celebration",
+  "description": "An interactive, animated Kawaii Boyfriend Day gift experience with delightful animations and interactive surprises.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
